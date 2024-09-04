@@ -7,13 +7,13 @@ namespace Produto
         static void Main(string[] args)
         {
             Console.WriteLine("Bem vindo ao sistema de produtos!\n\nInsira, linha por linha, o nome do produto, seu preço e quantidade:");
-            string nome = Console.ReadLine();
-            double preco = double.Parse(Console.ReadLine());
-            int qnt = int.Parse(Console.ReadLine());
-            if (qnt > 0 && preco > 0)
+            string nomeProduto = Console.ReadLine();
+            double precoProduto = double.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+            if (quantidade > 0 && precoProduto > 0)
             {
-                Calculos p = new Calculos(nome, preco, qnt);
-                Console.WriteLine($"Produto - {p.nome};\nPreço total para {p.qnt} produto(s) - {p.CalcularPreco(preco, qnt)}");
+                Calculos p = new Calculos(nomeProduto, precoProduto, quantidade);
+                Console.WriteLine($"Produto - {p.nome};\nPreço total para {p.qnt} produto(s) - {p.CalcularPreco(p.preco, p.qnt)}");
             }
         }
     }
