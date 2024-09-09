@@ -7,8 +7,8 @@ namespace Produto
     class Calculos
     {
         private string _nome;
-        public double preco;
-        public int qnt;
+        public double Preco { get; set; }
+        public int Qnt { get; set; }
         public string Nome
         {
             get
@@ -34,8 +34,8 @@ namespace Produto
         public Calculos(string nomeProduto, double precoProduto, int quantidade)
         {
             Nome = nomeProduto;
-            preco = precoProduto;
-            qnt = quantidade;
+            Preco = precoProduto;
+            Qnt = quantidade;
         }
         public double CalcularPreco(double preco, int qnt)
         {

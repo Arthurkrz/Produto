@@ -13,7 +13,7 @@ namespace Produto
             if (quantidade > 0 && precoProduto > 0)
             {
                 Calculos p = new Calculos(nomeProduto, precoProduto, quantidade);
-                Console.WriteLine($"Produto - {p.Nome};\nPreço total para {p.qnt} produto(s) - {p.CalcularPreco(p.preco, p.qnt)}");
+                Console.WriteLine($"Produto - {p.Nome};\nPreço total para {p.Qnt} produto(s) - {p.CalcularPreco(p.Preco, p.Qnt)}");
             }
         }
     }
