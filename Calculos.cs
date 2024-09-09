@@ -6,12 +6,34 @@ namespace Produto
 {
     class Calculos
     {
-        public string nome;
+        private string _nome;
         public double preco;
         public int qnt;
+        public string Nome
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_nome))
+                {
+                    return "N/A";
+                }
+                return _nome;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(_nome))
+                {
+                    _nome = value;
+                }
+                else
+                {
+                    _nome = "N/A";
+                }
+            }
+        }
         public Calculos(string nomeProduto, double precoProduto, int quantidade)
         {
-            nome = nomeProduto;
+            Nome = nomeProduto;
             preco = precoProduto;
             qnt = quantidade;
         }
